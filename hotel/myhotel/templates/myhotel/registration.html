@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, post-check=0, pre-check=0" />
+<meta http-equiv="Pragma" content="no-cache" />
+<body>
+<p>Please fill the Registation Form below</p>
+<form action="{% url 'myhotel:registration' %}" method="POST" name="registration">
+{% csrf_token %}
+    <table>
+        {{ user.as_table }}
+        {{ reguser.as_table }}
+    </table>
+<input type="submit" name="submit" value="Submmmit" />
+</form>
+</body>
+</html>
